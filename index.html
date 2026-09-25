@@ -1,1 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Lara Asesores | Asesoría y Administración de Fincas</title>
+
+<meta name="description" content="Lara Asesores. Asesoría fiscal, contable y laboral. Administración de fincas en La Sagra, Illescas y Madrid.">
+
+<style>
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+color: #17243a;
+background: #ffffff;
+line-height: 1.6;
+}
+
+header {
+background: #0d1b33;
+color: white;
+padding: 22px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo {
+font-size: 28px;
+font-weight: bold;
+color: #d6b36a;
+letter-spacing: 1px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 28px;
+font-size: 15px;
+}
+
+nav a:hover {
+color: #d6b36a;
+}
+
+.hero {
+background: linear-gradient(rgba(13,27,51,0.88), rgba(13,27,51,0.88)),
+url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
+background-size: cover;
+background-position: center;
+min-height: 620px;
+display: flex;
+align-items: center;
+padding: 80px 7%;
+color: white;
+}
+
+.hero-content {
+max-width: 750px;
+}
+
+.hero h1 {
+font-size: 58px;
+line-height: 1.1;
+margin-bottom: 25px;
+}
+
+.gold {
+color: #d6b36a;
+}
+
+.hero p {
+font-size: 21px;
+margin-bottom: 35px;
+color: #f1f1f1;
+}
+
+.button {
+display: inline-block;
+background: #d6b36a;
+color: #0d1b33;
+padding: 15px 28px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+margin-right: 10px;
+}
+
+.button:hover {
+background: #ead08f;
+}
+
+.button-outline {
+display: inline-block;
+border: 1px solid #d6b36a;
+color: white;
+padding: 14px 28px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+}
+
+section {
+padding: 80px 7%;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.section-title h2 {
+font-size: 38px;
+color: #0d1b33;
+margin-bottom: 12px;
+}
+
+.section-title p {
+color: #666;
+font-size: 17px;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 35px;
+max-width: 1100px;
+margin: auto;
+}
+
+.card {
+background: white;
+border-radius: 10px;
+padding: 40px;
+box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+border-top: 4px solid #d6b36a;
+}
+
+.card h3 {
+font-size: 27px;
+color: #0d1b33;
+margin-bottom: 18px;
+}
+
+.card p {
+color: #555;
+margin-bottom: 20px;
+}
+
+.card ul {
+list-style: none;
+}
+
+.card li {
+padding: 8px 0;
+border-bottom: 1px solid #eee;
+}
+
+.card li::before {
+content: "✓";
+color: #d6b36a;
+font-weight: bold;
+margin-right: 10px;
+}
+
+.services {
+background: #f6f7f9;
+}
+
+.service-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 1100px;
+margin: auto;
+}
+
+.service {
+background: white;
+padding: 30px;
+border-radius: 8px;
+text-align: center;
+box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.service h3 {
+color: #0d1b33;
+margin-bottom: 10px;
+}
+
+.service p {
+color: #666;
+}
+
+.highlight {
+background: #0d1b33;
+color: white;
+text-align: center;
+}
+
+.highlight h2 {
+color: #d6b36a;
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.highlight p {
+max-width: 850px;
+margin: auto;
+font-size: 19px;
+}
+
+.contact {
+background: #f6f7f9;
+}
+
+.contact-box {
+max-width: 850px;
+margin: auto;
+background: white;
+padding: 45px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+}
+
+.contact-box h2 {
+color: #0d1b33;
+margin-bottom: 15px;
+font-size: 34px;
+}
+
+.contact-box p {
+margin-bottom: 25px;
+color: #555;
+}
+
+.contact-info {
+font-size: 18px;
+margin: 12px 0;
+}
+
+.contact-info a {
+color: #0d1b33;
+text-decoration: none;
+font-weight: bold;
+}
+
+footer {
+background: #081426;
+color: white;
+text-align: center;
+padding: 35px 20px;
+}
+
+footer .footer-logo {
+color: #d6b36a;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+footer p {
+color: #bbb;
+font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+header {
+flex-direction: column;
+gap: 15px;
+}
+
+nav a {
+margin: 0 8px;
+}
+
+.hero h1 {
+font-size: 40px;
+}
+
+.hero p {
+font-size: 18px;
+}
+
+.cards {
+grid-template-columns: 1fr;
+}
+
+.service-grid {
+grid-template-columns: 1fr;
+}
+
+section {
+padding: 60px 6%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">LARA ASESORES</div>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#fincas">Fincas</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>
+Tu tranquilidad,<br>
+<span class="gold">nuestra gestión.</span>
+</h1>
+
+<p>
+Asesoría y Administración de Fincas con un trato cercano,
+profesional y personalizado.
+</p>
+
+<a href="#contacto" class="button">
+Solicitar presupuesto
+</a>
+
+<a href="#servicios" class="button-outline">
+Ver servicios
+</a>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-title">
+
+<h2>¿En qué podemos ayudarte?</h2>
+
+<p>
+Soluciones profesionales para empresas, autónomos y comunidades.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Asesoría</h3>
+
+<p>
+Nos encargamos de la gestión fiscal y contable de tu negocio
+para que puedas centrarte en lo realmente importante.
+</p>
+
+<ul>
+<li>Contabilidad</li>
+<li>Fiscalidad</li>
+<li>Gestión de autónomos</li>
+<li>Asesoramiento para empresas</li>
+<li>Presentación de impuestos</li>
+</ul>
+
+</div>
+
+
+<div class="card" id="fincas">
+
+<h3>Administración de Fincas</h3>
+
+<p>
+Una administración cercana, transparente y disponible para
+todos los propietarios durante todo el año.
+</p>
+
+<ul>
+<li>Gestión integral de comunidades</li>
+<li>Atención a propietarios</li>
+<li>Gestión de proveedores</li>
+<li>Control económico y contable</li>
+<li>Portal web del propietario</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="services" id="servicios">
+
+<div class="section-title">
+
+<h2>Nuestros servicios</h2>
+
+<p>
+Todo lo que necesitas, en un único lugar.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="service">
+
+<h3>Fiscalidad</h3>
+
+<p>
+Presentación de impuestos y planificación fiscal adaptada
+a cada cliente.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Contabilidad</h3>
+
+<p>
+Llevamos tu contabilidad al día para que conozcas en todo
+momento la situación de tu negocio.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Administración de Fincas</h3>
+
+<p>
+Gestión profesional de comunidades con comunicación directa
+y transparente.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Atención 365 días</h3>
+
+<p>
+Estamos disponibles durante todo el año para propietarios
+y presidentes.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Portal del propietario</h3>
+
+<p>
+Acceso web 24 horas a la información de tu comunidad.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<h3>Sin permanencias</h3>
+
+<p>
+Contrato indefinido sin permanencias y con total transparencia.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="highlight">
+
+<h2>Cercanía, disponibilidad y confianza</h2>
+
+<p>
+Lo que nos distingue es nuestra forma de trabajar.
+Priorizamos el buen servicio y estamos a disposición de
+nuestros clientes los 365 días del año.
+</p>
+
+</section>
+
+
+<section id="contacto" class="contact">
+
+<div class="contact-box">
+
+<h2>Solicita tu presupuesto</h2>
+
+<p>
+Cuéntanos qué necesitas y estudiaremos tu caso
+sin compromiso.
+</p>
+
+<div class="contact-info">
+📧 <a href="mailto:fincas@laragestion.es">
+fincas@laragestion.es
+</a>
+</div>
+
+<div class="contact-info">
+📞 <a href="tel:+34624861372">
+624 861 372
+</a>
+</div>
+
+<br>
+
+<a href="mailto:fincas@laragestion.es" class="button">
+Solicitar presupuesto
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-logo">
+LARA ASESORES
+</div>
+
+<p>
+Asesoría y Administración de Fincas
+</p>
+
+<p>
+© 2026 Lara Asesores. Todos los derechos reservados.
+</p>
+
+</footer>
+
+</body>
+</html>
